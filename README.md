@@ -57,35 +57,21 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_memorydb_cluster.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_cluster) | resource |
-| [aws_memorydb_cluster_instance.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_cluster_instance) | resource |
-| [aws_memorydb_parameter_group.examplea](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_parameter_group) | resource |
-| [aws_memorydb_subnet_group.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_subnet_group) | resource |
-| [aws_security_group.memorydb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
-| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| [aws_memorydb_cluster.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_cluster) | resource |
+| [aws_memorydb_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_subnet_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_allowed_range"></a> [allowed\_range](#input\_allowed\_range) | Cidrs that are allowed into Memorydb | `list(any)` | n/a | yes |
-| <a name="input_cluster"></a> [cluster](#input\_cluster) | Memorydb Cluster data | `map(any)` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| <a name="input_identifier"></a> [identifier](#input\_identifier) | (optional) describe your variable | `string` | `"example-a"` | no |
-| <a name="input_instance"></a> [instance](#input\_instance) | n/a | `map(any)` | <pre>{<br>  "apply_immediately": true,<br>  "count": 2,<br>  "engine": "memorydb",<br>  "instance_class": "db.r4.large"<br>}</pre> | no |
+| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | <pre>object({<br>    acl_name                 = string<br>    name                     = string<br>    node_type                = string<br>    num_shards               = number<br>    snapshot_retention_limit = number<br>  })</pre> | n/a | yes |
 | <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | n/a | `string` | n/a | yes |
-| <a name="input_security_groups"></a> [security\_groups](#input\_security\_groups) | List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC | `list(any)` | `[]` | no |
-| <a name="input_subnet_group_name"></a> [subnet\_group\_name](#input\_subnet\_group\_name) | n/a | `string` | `"main"` | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(any)` | n/a | yes |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | Security Group needs to know where to ne made | `string` | n/a | yes |
+| <a name="input_security_group_ids"></a> [security\_group\_ids](#input\_security\_group\_ids) | n/a | `list(string)` | n/a | yes |
+| <a name="input_subnet_list"></a> [subnet\_list](#input\_subnet\_list) | n/a | `list(string)` | n/a | yes |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
-| <a name="output_instances"></a> [instances](#output\_instances) | n/a |
-| <a name="output_subnet"></a> [subnet](#output\_subnet) | n/a |
+No outputs.
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects

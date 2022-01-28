@@ -18,5 +18,5 @@ variable "kms_key_arn" {
 
 
 variable "security_group_ids" {
-    type = list(string)
+  type = list(string)
 }

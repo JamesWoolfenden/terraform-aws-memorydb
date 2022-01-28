@@ -9,5 +9,3 @@ resource "aws_memorydb_cluster" "example" {
   subnet_group_name        = aws_memorydb_subnet_group.example.id
   tls_enabled              = true
 }
-
-
