@@ -7,3 +7,7 @@ variable "cluster" {
     snapshot_retention_limit = number
   })
 }
+variable "ingress" {
+  type = string
+
+}

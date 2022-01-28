@@ -5,3 +5,5 @@ cluster = {
   num_shards               = 2
   snapshot_retention_limit = 7
 }
+
+ingress = "8.8.8.8/32"
