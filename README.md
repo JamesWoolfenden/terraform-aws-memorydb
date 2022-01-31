@@ -38,6 +38,14 @@ module "memorydb" {
 }
 ```
 
+See the example for security group details.
+
+To view the snapshot:
+
+```shell
+aws memorydb describe-snapshots
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
@@ -58,20 +66,25 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_memorydb_cluster.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_cluster) | resource |
+| [aws_memorydb_snapshot.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_snapshot) | resource |
 | [aws_memorydb_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_subnet_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | <pre>object({<br>    acl_name                 = string<br>    name                     = string<br>    node_type                = string<br>    num_shards               = number<br>    snapshot_retention_limit = number<br>  })</pre> | n/a | yes |
+| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | <pre>object({<br>    acl_name                 = string<br>    name                     = string<br>    node_type                = string<br>    num_shards               = number<br>    snapshot_retention_limit = number<br>    tls_enabled              = bool<br>  })</pre> | n/a | yes |
 | <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | n/a | `string` | n/a | yes |
 | <a name="input_security_group_ids"></a> [security\_group\_ids](#input\_security\_group\_ids) | n/a | `list(string)` | n/a | yes |
 | <a name="input_subnet_list"></a> [subnet\_list](#input\_subnet\_list) | n/a | `list(string)` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
+| <a name="output_snapshot"></a> [snapshot](#output\_snapshot) | n/a |
+| <a name="output_subnet"></a> [subnet](#output\_subnet) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects

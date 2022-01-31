@@ -4,7 +4,7 @@ resource "aws_security_group" "example" {
   name_prefix = "memorydb"
 
   ingress {
-    description = "Redis comptability"
+    description = "Redis compatibility"
     from_port   = 6379
     to_port     = 6379
     protocol    = "tcp"
@@ -19,4 +19,6 @@ resource "aws_security_group" "example" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
+
+  vpc_id = var.vpc_id
 }
