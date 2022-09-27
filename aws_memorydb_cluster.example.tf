@@ -8,4 +8,5 @@ resource "aws_memorydb_cluster" "example" {
   snapshot_retention_limit = var.cluster.snapshot_retention_limit
   subnet_group_name        = aws_memorydb_subnet_group.example.id
   tls_enabled              = var.cluster.tls_enabled
+  tags                     = var.common_tags
 }

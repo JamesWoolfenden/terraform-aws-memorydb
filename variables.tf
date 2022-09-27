@@ -21,3 +21,7 @@ variable "kms_key_arn" {
 variable "security_group_ids" {
   type = list(string)
 }
+
+variable "common_tags" {
+  type = map(any)
+}
