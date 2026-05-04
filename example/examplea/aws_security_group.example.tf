@@ -1,4 +1,5 @@
 resource "aws_security_group" "example" {
+  # checkov:skip=CKV_AWS_382: Unrestricted outbound access required for resource functionality
   # checkov:skip=CKV2_AWS_5: used in module
   description = "Firewall for MemoryDB"
   name_prefix = "memorydb"
