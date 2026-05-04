@@ -8,20 +8,15 @@ variable "cluster" {
     tls_enabled              = bool
   })
 }
-
 variable "subnet_list" {
   type = list(string)
 }
-
 variable "kms_key_arn" {
   type = string
 }
-
-
 variable "security_group_ids" {
   type = list(string)
 }
-
 variable "common_tags" {
   type = map(any)
 }

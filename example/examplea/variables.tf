@@ -8,11 +8,9 @@ variable "cluster" {
     tls_enabled              = bool
   })
 }
-
 variable "ingress" {
   type = string
 }
-
 variable "vpc_id" {
   type = string
 }
