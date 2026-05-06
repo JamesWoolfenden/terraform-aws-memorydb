@@ -1,13 +1,11 @@
 # terraform-aws-memorydb
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-memorydb/workflows/Verify%20and%20Bump/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-memorydb)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-memorydb/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-memorydb)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-memorydb.svg)](https://github.com/JamesWoolfenden/terraform-aws-memorydb/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-memorydb.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-memorydb/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-memorydb/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-memorydb&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-memorydb/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-memorydb&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module -
 
@@ -54,7 +52,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -64,7 +62,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_memorydb_cluster.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_cluster) | resource |
 | [aws_memorydb_snapshot.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_snapshot) | resource |
 | [aws_memorydb_subnet_group.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/memorydb_subnet_group) | resource |
@@ -72,8 +70,8 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | <pre>object({<br>    acl_name                 = string<br>    name                     = string<br>    node_type                = string<br>    num_shards               = number<br>    snapshot_retention_limit = number<br>    tls_enabled              = bool<br>  })</pre> | n/a | yes |
+| ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_cluster"></a> [cluster](#input\_cluster) | n/a | <pre>object({<br/>    acl_name                 = string<br/>    name                     = string<br/>    node_type                = string<br/>    num_shards               = number<br/>    snapshot_retention_limit = number<br/>    tls_enabled              = bool<br/>  })</pre> | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
 | <a name="input_kms_key_arn"></a> [kms\_key\_arn](#input\_kms\_key\_arn) | n/a | `string` | n/a | yes |
 | <a name="input_security_group_ids"></a> [security\_group\_ids](#input\_security\_group\_ids) | n/a | `list(string)` | n/a | yes |
@@ -82,7 +80,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_cluster"></a> [cluster](#output\_cluster) | n/a |
 | <a name="output_snapshot"></a> [snapshot](#output\_snapshot) | n/a |
 | <a name="output_subnet"></a> [subnet](#output\_subnet) | n/a |
